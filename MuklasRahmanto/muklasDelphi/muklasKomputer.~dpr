@@ -1,0 +1,33 @@
+program muklasKomputer;
+{*************************
+ *************************
+ ***  Muklas Rahmanto  ***
+ ***       RPL 1       ***
+ ***   SMKN 1 BANTUL   ***
+ *************************
+ *************************}
+uses
+  Forms,
+  muklasUtama in 'muklasUtama.pas' {muklasFUtama},
+  muklasBarang in 'muklasBarang.pas' {muklasFBarang},
+  muklasBarangTambah in 'muklasBarangTambah.pas' {FBarangTambah},
+  muklasKaryawan in 'muklasKaryawan.pas' {FKaryawan},
+  muklasKaryawanTambah in 'muklasKaryawanTambah.pas' {FKaryawanTambah},
+  muklasTransaksi in 'muklasTransaksi.pas' {muklasFTransaksi},
+  muklasFQR_U in 'muklasFQR_U.pas' {muklasFQR},
+  muklasLogTransaksi in 'muklasLogTransaksi.pas' {muklasFLogTransaksi},
+  muklasLogDetail in 'muklasLogDetail.pas' {FDetail},
+  muklasLogin in 'muklasLogin.pas' {FLogin},
+  muklasSeting in 'muklasSeting.pas' {muklasFSeting};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'MyCart';
+  Application.CreateForm(TFLogin, FLogin);
+  Application.CreateForm(TmuklasFQR, muklasFQR);
+  Application.CreateForm(TmuklasFUtama, muklasFUtama);
+  Application.CreateForm(TmuklasFTransaksi, muklasFTransaksi);
+  Application.Run;
+end.
